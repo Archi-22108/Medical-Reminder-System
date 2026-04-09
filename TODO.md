@@ -1,18 +1,27 @@
-# Medical Reminder System - Error Fixes TODO
+# Medical Reminder System - Render Backend Deployment TODO
 
-## Current Status: All syntax/config errors identified and queued for fix.
+✅ GitHub repo pushed with all files
+## Backend Render Deployment Steps
 
-### Steps to Complete:
-- [x] **1. Create backend/.env template** - Essential for DB/JWT connection.
-- [x] **2. Fix backend/package.json** - Correct main, scripts, deps versions, nodemon to devDeps.
-- [x] **3. Update backend/server.js** - Move error handler before listen/routes.
-- [x] **4. Enhance backend/models/User.js** - Add timestamps.
-- [x] **5. Update frontend/package.json** - Stable Vite/eslint versions.
-- [x] **6. Update this TODO.md** - Mark all done.
-- [ ] **7. Install dependencies** - Backend & frontend npm install.
-- [ ] **8. Test backend** - cd backend && npm run dev.
-- [ ] **9. Test frontend** - cd frontend && npm run dev.
-- [ ] **10. Complete task** - attempt_completion.
+1. [ ] Create `backend/.env.example` (done below)
+2. [ ] Update CORS in `backend/server.js` (done below)
+3. [ ] git add . && git commit -m \"Prepare backend for Render deployment\" && git push
+4. [ ] Create MongoDB Atlas cluster (free):
+   - Sign up mongodb.com/atlas
+   - Create M0 cluster
+   - Add Network Access (0.0.0.0/0)
+   - Create DB user
+   - Get MONGO_URI
+5. [ ] Render.com:
+   - Sign up render.com (GitHub login)
+   - New → Web Service → Connect repo
+   - Node, Root Directory: `backend`
+   - Build: `npm install`
+   - Start: `npm start`
+   - Env: MONGO_URI = your_atlas_uri
+   - Deploy → get https://your-app.onrender.com
+6. [ ] Test: https://your-app.onrender.com/api/auth/register (POST)
+7. [ ] Frontend: Update api.jsx baseURL, deploy Netlify/Vercel
 
-Progress tracked here. Each step checked off after completion.
+**Next auto-steps: 1-3**
 
