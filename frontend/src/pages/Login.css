@@ -1,0 +1,259 @@
+/* Female-Friendly Login Page - Medical Reminder System */
+
+.login-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #FFE4E1 0%, #E6E6FA 100%);
+  padding: 1.5rem;
+}
+
+.login-form {
+  background: #FFFFFF;
+  padding: 2.5rem;
+  border-radius: 24px;
+  box-shadow: 0 20px 60px rgba(255, 192, 203, 0.25);
+  width: 100%;
+  max-width: 450px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  border: 2px solid rgba(255, 192, 203, 0.15);
+  backdrop-filter: blur(10px);
+}
+
+.login-form h2 {
+  margin: 0;
+  text-align: center;
+  background: linear-gradient(135deg, #FFC0CB, #DDA0DD);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+.form-subtitle {
+  text-align: center;
+  color: #6B7280;
+  font-size: 0.95rem;
+  margin: -1rem 0 0.5rem 0;
+  padding: 0;
+  font-weight: 500;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+
+.form-group label {
+  display: block;
+  color: #2D1B3F;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 1rem 1.25rem;
+  border: 2px solid #FFE4E1;
+  border-radius: 16px;
+  font-size: 1rem;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  font-family: inherit;
+  background: #FFF8F8;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #FFC0CB;
+  box-shadow: 0 0 0 4px rgba(255, 192, 203, 0.15);
+  transform: translateY(-2px);
+  background: #FFFFFF;
+}
+
+.form-group input::placeholder {
+  color: #B0B8C1;
+}
+
+.error-message {
+  color: #D32F2F;
+  background-color: #FFEBEE;
+  padding: 0.85rem 1rem;
+  border-left: 4px solid #D32F2F;
+  border-radius: 8px;
+  font-weight: 500;
+  font-size: 0.9rem;
+  display: block;
+}
+
+button[type="submit"] {
+  width: 100%;
+  padding: 1rem;
+  background: linear-gradient(135deg, #FFC0CB, #DDA0DD);
+  color: #FFFFFF;
+  border: none;
+  border-radius: 16px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  margin-top: 0.5rem;
+  box-shadow: 0 8px 24px rgba(255, 192, 203, 0.3);
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+}
+
+button[type="submit"]:hover:not(:disabled) {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 40px rgba(255, 192, 203, 0.4);
+}
+
+button[type="submit"]:active {
+  transform: translateY(-2px);
+}
+
+button[type="submit"]:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.form-footer {
+  text-align: center;
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid #FFE4E1;
+}
+
+.form-footer p {
+  color: #6B7280;
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+.register-link {
+  color: #DDA0DD;
+  text-decoration: none;
+  font-weight: 700;
+  transition: all 0.3s ease;
+}
+
+.register-link:hover {
+  color: #FFC0CB;
+  text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+  .login-container {
+    padding: 1rem;
+  }
+
+  .login-form {
+    padding: 2rem 1.5rem;
+    border-radius: 20px;
+    gap: 1.25rem;
+  }
+
+  .login-form h2 {
+    font-size: 1.6rem;
+  }
+
+  .form-subtitle {
+    font-size: 0.9rem;
+  }
+
+  .form-group input {
+    padding: 0.85rem 1rem;
+    border-radius: 12px;
+  }
+
+  button[type="submit"] {
+    padding: 0.9rem;
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .login-form {
+    padding: 1.5rem 1.25rem;
+    gap: 1rem;
+    border-radius: 16px;
+  }
+
+  .login-form h2 {
+    font-size: 1.4rem;
+  }
+
+  .form-group {
+    gap: 0.5rem;
+  }
+
+  .form-group label {
+    font-size: 0.9rem;
+  }
+
+  .form-group input {
+    padding: 0.8rem;
+    font-size: 0.95rem;
+  }
+
+  button[type="submit"] {
+    padding: 0.8rem;
+    font-size: 0.9rem;
+  }
+}
+    padding: 2rem 1.5rem;
+    border-radius: 8px;
+    max-width: 100%;
+  }
+
+  .login-form h2 {
+    font-size: 1.5rem;
+  }
+
+  .form-subtitle {
+    font-size: 0.9rem;
+  }
+
+  .submit-btn {
+    padding: 0.8rem;
+    font-size: 0.95rem;
+  }
+
+  .form-footer {
+    margin-top: 0.8rem;
+    padding-top: 0.8rem;
+  }
+
+  .form-footer p {
+    font-size: 0.9rem;
+  }
+}
+
+
+.login-container {
+  width: 300px;
+  margin: 100px auto;
+  text-align: center;
+}
+
+.login-container input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+.login-container button {
+  width: 100%;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.error {
+  color: red;
+  font-size: 14px;
+}

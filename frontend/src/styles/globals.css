@@ -1,0 +1,144 @@
+/* Female-Friendly Global Theme - Medical Reminder System */
+
+/* Pastel Color Palette 💕 */
+:root {
+  --blush-pink: #FFC0CB;
+  --soft-blush: #FFE4E1;
+  --lavender: #DDA0DD;
+  --light-lavender: #E6E6FA;
+  --mint-green: #AFEEEE;
+  --soft-mint: #F0FFF0;
+  --warm-white: #FFF8F8;
+  --light-gray: #F8F9FA;
+  --text-dark: #2D1B3F;
+  --text-muted: #6B7280;
+  --shadow-soft: 0 8px 32px rgba(255, 192, 203, 0.15);
+  --border-soft: 1px solid rgba(255, 192, 203, 0.2);
+}
+
+/* Global Reset & Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  background: linear-gradient(135deg, var(--soft-blush) 0%, var(--light-lavender) 100%);
+  min-height: 100vh;
+  color: var(--text-dark);
+  line-height: 1.6;
+}
+
+/* App Layout */
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content {
+  flex: 1;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* Responsive Typography */
+h1, h2, h3 {
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+h2 {
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  background: linear-gradient(135deg, var(--blush-pink), var(--lavender));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 1rem;
+}
+
+/* Form Elements 💖 */
+input {
+  width: 100%;
+  padding: 1rem 1.25rem;
+  border: 2px solid var(--soft-blush);
+  border-radius: 16px;
+  font-size: 1rem;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  background: var(--warm-white);
+  font-family: inherit;
+}
+
+input:focus {
+  outline: none;
+  border-color: var(--blush-pink);
+  box-shadow: 0 0 0 4px rgba(255, 192, 203, 0.15);
+  transform: translateY(-2px);
+}
+
+button {
+  background: linear-gradient(135deg, var(--blush-pink), var(--lavender));
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 16px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: var(--shadow-soft);
+}
+
+button:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 40px rgba(255, 192, 203, 0.3);
+}
+
+/* Links & Navigation */
+a {
+  color: var(--lavender);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+a:hover {
+  color: var(--blush-pink);
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .main-content {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-content {
+    padding: 0.5rem;
+  }
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Heart Animation 💕 */
+@keyframes heartbeat {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+
+.heartbeat {
+  animation: heartbeat 1.5s ease-in-out infinite;
+}
+
