@@ -1,27 +1,33 @@
 # Medical Reminder System - Render Backend Deployment TODO
 
-✅ GitHub repo pushed with all files
-## Backend Render Deployment Steps
+✅ 1. backend/.env.example created
+✅ 2. backend/server.js CORS updated  
+✅ 3. Changes committed & pushed (e3b2b58)
 
-1. [ ] Create `backend/.env.example` (done below)
-2. [ ] Update CORS in `backend/server.js` (done below)
-3. [ ] git add . && git commit -m \"Prepare backend for Render deployment\" && git push
-4. [ ] Create MongoDB Atlas cluster (free):
-   - Sign up mongodb.com/atlas
-   - Create M0 cluster
-   - Add Network Access (0.0.0.0/0)
-   - Create DB user
-   - Get MONGO_URI
-5. [ ] Render.com:
-   - Sign up render.com (GitHub login)
-   - New → Web Service → Connect repo
-   - Node, Root Directory: `backend`
-   - Build: `npm install`
-   - Start: `npm start`
-   - Env: MONGO_URI = your_atlas_uri
-   - Deploy → get https://your-app.onrender.com
-6. [ ] Test: https://your-app.onrender.com/api/auth/register (POST)
-7. [ ] Frontend: Update api.jsx baseURL, deploy Netlify/Vercel
+## Remaining User Steps:
 
-**Next auto-steps: 1-3**
+4. [ ] MongoDB Atlas: 
+   - Sign up: https://mongodb.com/atlas
+   - Create free M0 cluster (AWS/GCP)
+   - Network Access: Add IP 0.0.0.0/0 
+   - DB User: Create admin user/password
+   - Connect → Drivers → Copy MONGO_URI (mongodb+srv://...)
+
+5. [ ] Render.com Backend Deploy:
+   - Free account: https://render.com (GitHub login)
+   - New → Web Service → Select this repo
+   - Environment: Node
+   - **Root Directory: `backend`**
+   - Build Command: `npm install`
+   - Start Command: `npm start`
+   - Add Environment Variable: `MONGO_URI` = your Atlas URI
+   - Create → Deploy (free tier: sleeps after inactivity)
+
+6. [ ] Test Backend:
+   - Visit: https://your-app-name.onrender.com/
+   - Expected: "API is running..."
+   - POST /api/auth/register {name, email, password}
+
+**Next: Frontend deploy? (Netlify/Vercel)**
+
 
