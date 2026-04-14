@@ -13,7 +13,7 @@ const PrivateRoute = ({ children }) => {
 
 function AppContent() {
   const location = useLocation();
-  const isAuthPage = location.pathname === "/login" || location.pathname === "/register";
+  const isAuthPage = location.pathname === "/login" || location.pathname === "/register" || location.pathname.startsWith("/admin");
   const isLoggedIn = !!localStorage.getItem("token");
 
   return (

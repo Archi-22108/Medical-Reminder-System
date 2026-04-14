@@ -24,7 +24,9 @@ async function createAdmin() {
     });
     console.log('✅ Admin user created:', email);
   } else {
-    console.log('ℹ️ Admin user already exists:', email);
+    user.isAdmin = true;
+    await user.save();
+    console.log('ℹ️ Admin user already exists, isAdmin set to true:', email);
   }
   mongoose.disconnect();
 }
