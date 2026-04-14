@@ -2,8 +2,7 @@ import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import "./Register.css";
 
-const API = "http://localhost:5001/api";
-
+import API from "../api";
 function Register() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -17,24 +16,11 @@ function Register() {
     e.preventDefault();
     setError("");
     setLoading(true);
-
     try {
-      const res = await fetch(`${API}/auth/register`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json"
-        },
-        body: JSON.stringify({ name, email, password })
-      });
-
-      if (res.ok) {
-        setTimeout(() => navigate("/login"), 1500);
-      } else {
-        const data = await res.json();
-        setError(data.message || "Registration failed 💔");
-      }
-    } catch {
-      setError("Network error. Please try again 🌸");
+      const res = await API.post("/auth/register", { name, email, password });
+      setTimeout(() => navigate("/login"), 1500);
+    } catch (err) {
+      setError(err.response?.data?.message || "Registration failed 💔");
     } finally {
       setLoading(false);
     }
