@@ -97,3 +97,7 @@ This project has been specially modified and thoroughly structured to deliver an
 
 ---
 *Created with ❤️ for smooth healthcare management!*
+
+---
+### 👥 Contributors
+- Avinash Kumar ([@avinash-git-24](https://github.com/avinash-git-24))
